@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="21" />
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
@@ -15,28 +15,44 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.example.foodneck.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity 
-            android:name="com.example.foodneck.Cards"></activity>
-           <activity 
-            android:name="com.example.foodneck.Redeem"></activity>
-             <activity 
-            android:name="com.example.foodneck.Coupons"></activity>
-             
-             <activity 
-            android:name="com.example.foodneck.MenuActivity"></activity>
-             
-             <activity 
-            android:name="com.example.foodneck.AddMenu"></activity>
-        
+        <activity android:name="com.example.foodneck.Cards" >
+        </activity>
+        <activity android:name="com.example.foodneck.Redeem" >
+        </activity>
+        <activity android:name="com.example.foodneck.Coupons" >
+        </activity>
+        <activity android:name="com.example.foodneck.MenuActivity" >
+        </activity>
+        <activity android:name="com.example.foodneck.AddMenu" >
+        </activity>
+        <activity
+            android:name="com.example.foodneck.EditProfile"
+            android:label="@string/title_activity_edit_profile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.foodneck.Followes"
+            android:label="@string/title_activity_followes"
+            android:screenOrientation="portrait" >
+        </activity>
+      <!--   <activity
+            android:name="com.example.foodneck.MainActivity"
+            android:label="@string/title_activity_trading_tags"
+            android:screenOrientation="portrait" >
+        </activity> -->
+        <activity
+            android:name="com.example.foodneck.TradingTags"
+            android:label="@string/title_activity_tag_details" >
+        </activity>
     </application>
 
 </manifest>

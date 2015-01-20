@@ -3,7 +3,6 @@ package com.example.foodneck;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -34,7 +33,7 @@ public class HomeFragment extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater,
-			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+			ViewGroup container, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		inflater = getActivity().getLayoutInflater();
 		mequest1 = new QuotesAdapter1(getActivity(), getFragmentManager());

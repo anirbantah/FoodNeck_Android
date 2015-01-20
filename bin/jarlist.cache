@@ -1,6 +1,6 @@
 # cache for current jar dependency. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1420437421000 758727 efec67655f6db90757faa37201efcee2a9ec3507 /home/su/Sportsonline/library3/libs/android-support-v4.jar
-1420437421000 758727 efec67655f6db90757faa37201efcee2a9ec3507 /home/su/Sportsonline/FoodNeck/libs/android-support-v4.jar
-1403524040000 758727 efec67655f6db90757faa37201efcee2a9ec3507 /home/su/Sportsonline/appcompat_v7/libs/android-support-v4.jar
+1389945690000 627582 cb6883d96005bc85b3e868f204507ea5b4fa9bbf /home/su/Resturent/appcompat_v7_3/libs/android-support-v4.jar
+1389945690000 627582 cb6883d96005bc85b3e868f204507ea5b4fa9bbf /home/su/Resturent/FoodNeck/libs/android-support-v4.jar
+1389945690000 627582 cb6883d96005bc85b3e868f204507ea5b4fa9bbf /home/su/Resturent/library/libs/android-support-v4.jar

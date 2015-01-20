@@ -1,0 +1,402 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.foodneck.TradingTags"
+    tools:ignore="MergeRootFrame" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/topbaredit"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingLeft="15dp" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="15dp"
+                android:layout_height="24dp"
+                android:background="@drawable/back" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="#paulm"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:weightSum="4" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Followers"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#CC202E" >
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Following"
+                android:textColor="#B0B0B0"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff" >
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:background="#E2E2E2"
+        android:padding="15dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/headerLol"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/toptopclip"
+                android:gravity="center"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mainContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerLol"
+                android:background="#ffffff"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp" >
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/taggray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="# Steak"
+                        android:textColor="#AFAFAF" />
+
+                    <TextView
+                        android:id="@+id/textView4end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="10dp"
+                        android:text="Cards"
+                        android:textColor="#AFAFAF" />
+
+                    <EditText
+                        android:id="@+id/editText1"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/textView4end"
+                        android:background="#00ffffff"
+                        android:inputType="numberDecimal"
+                        android:text="8000"
+                        android:textColor="#AFAFAF" >
+
+                        <requestFocus />
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="12dp" >
+
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/taggray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="# Potato"
+                        android:textColor="#AFAFAF" />
+
+                    <TextView
+                        android:id="@+id/textView4end2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="10dp"
+                        android:text="Cards"
+                        android:textColor="#AFAFAF" />
+
+                    <EditText
+                        android:id="@+id/editText12"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/textView4end2"
+                        android:background="#00ffffff"
+                        android:inputType="numberDecimal"
+                        android:text="8000"
+                        android:textColor="#AFAFAF" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="12dp" >
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/taggray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="# Steak"
+                        android:textColor="#AFAFAF" />
+
+                    <TextView
+                        android:id="@+id/textView4end3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="10dp"
+                        android:text="Cards"
+                        android:textColor="#AFAFAF" />
+
+                    <EditText
+                        android:id="@+id/editText13"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/textView4end3"
+                        android:background="#00ffffff"
+                        android:inputType="numberDecimal"
+                        android:text="8000"
+                        android:textColor="#AFAFAF" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="12dp" >
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/taggray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="# Potato"
+                        android:textColor="#AFAFAF" />
+
+                    <TextView
+                        android:id="@+id/textView4end4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="10dp"
+                        android:text="Cards"
+                        android:textColor="#AFAFAF" />
+
+                    <EditText
+                        android:id="@+id/editText14"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/textView4end4"
+                        android:background="#00ffffff"
+                        android:inputType="numberDecimal"
+                        android:text="8000"
+                        android:textColor="#AFAFAF" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="12dp" >
+
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/taggray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="# Steak"
+                        android:textColor="#AFAFAF" />
+
+                    <TextView
+                        android:id="@+id/textView4end5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="10dp"
+                        android:text="Cards"
+                        android:textColor="#AFAFAF" />
+
+                    <EditText
+                        android:id="@+id/editText15"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/textView4end5"
+                        android:background="#00ffffff"
+                        android:inputType="numberDecimal"
+                        android:text="8000"
+                        android:textColor="#AFAFAF" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="12dp" >
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/taggray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="# Steak"
+                        android:textColor="#AFAFAF" />
+
+                    <TextView
+                        android:id="@+id/textView4end6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="10dp"
+                        android:text="Cards"
+                        android:textColor="#AFAFAF" />
+
+                    <EditText
+                        android:id="@+id/editText16"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/textView4end6"
+                        android:background="#00ffffff"
+                        android:inputType="numberDecimal"
+                        android:text="8000"
+                        android:textColor="#AFAFAF" >
+                    </EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/headerLolfoot"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/mainContainer"
+                android:background="@drawable/topclip"
+                android:gravity="center"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

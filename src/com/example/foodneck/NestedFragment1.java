@@ -1,17 +1,13 @@
 package com.example.foodneck;
 
-import org.w3c.dom.Comment;
-
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class NestedFragment1 extends Fragment {
 
@@ -20,8 +16,8 @@ public class NestedFragment1 extends Fragment {
 	ListView list1;
 
 	@Override
-	public View onCreateView(LayoutInflater inflater,
-			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		inflater = getActivity().getLayoutInflater();
 
