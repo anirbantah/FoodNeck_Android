@@ -26,6 +26,13 @@
         </activity>
         <activity android:name="com.example.foodneck.Cards" >
         </activity>
+        
+         <activity android:name="com.example.foodneck.FilterActivity" >
+        </activity>
+         <activity android:name="com.example.foodneck.Review" >
+        </activity>
+          <activity android:name="com.example.foodneck.Trandingpost" >
+        </activity>
         <activity android:name="com.example.foodneck.Redeem" >
         </activity>
         <activity android:name="com.example.foodneck.Coupons" >
@@ -40,15 +47,33 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name="com.example.foodneck.Resturantlist"
+            android:label="@string/title_activity_edit_profile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.foodneck.ResturantDetails"
+            android:label="@string/title_activity_edit_profile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.foodneck.TagDetails"
+            android:label="@string/title_activity_edit_profile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name="com.example.foodneck.Followes"
             android:label="@string/title_activity_followes"
             android:screenOrientation="portrait" >
         </activity>
-      <!--   <activity
+
+        <!--
+        <activity
             android:name="com.example.foodneck.MainActivity"
             android:label="@string/title_activity_trading_tags"
             android:screenOrientation="portrait" >
-        </activity> -->
+        </activity>
+        -->
         <activity
             android:name="com.example.foodneck.TradingTags"
             android:label="@string/title_activity_tag_details" >

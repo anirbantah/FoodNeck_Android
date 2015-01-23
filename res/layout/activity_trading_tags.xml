@@ -112,6 +112,7 @@
         android:padding="15dp" >
 
         <RelativeLayout
+            android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00ffffff"

@@ -30,7 +30,7 @@ public class MainActivity extends FragmentActivity {
 
 	LayoutInflater inflater;
 	TextView hometext, placetext, peopletext;
-	LinearLayout mycoupons, bookmark, recent_lin, editlin, rateus_lin;
+	LinearLayout mycoupons, bookmark, recent_lin, editlin, rateus_lin,aboutus,resturanrt,signout_lin;
 	ImageView leftmenu;
 	RelativeLayout people, home, place;
 	private DrawerLayout mDrawerLayout;
@@ -70,6 +70,8 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, Resturantlist.class);
+				startActivity(i);
 
 			}
 		});
@@ -140,8 +142,62 @@ public class MainActivity extends FragmentActivity {
 				.findViewById(R.id.leftmenu);
 		mycoupons = (LinearLayout) findViewById(R.id.mycoupons);
 		bookmark = (LinearLayout) findViewById(R.id.bookmark);
+		signout_lin=(LinearLayout)findViewById(R.id.signout_lin);
+		
+		signout_lin.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, FilterActivity.class);
+				startActivity(i);
+			}
+		});
 		bookmark.setOnClickListener(new OnClickListener() {
 
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, MenuActivity.class);
+				startActivity(i);
+			}
+		});
+		
+		TextView newres=(TextView)findViewById(R.id.newres);
+		newres.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, NewRestaurent.class);
+				startActivity(i);
+			}
+		});
+		
+		TextView usercards=(TextView)findViewById(R.id.usercards);
+		newres.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, UserCards.class);
+				startActivity(i);
+			}
+		});
+		
+		TextView trendingpost=(TextView)findViewById(R.id.trendingpost);
+		trendingpost.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, Trandingpost.class);
+				startActivity(i);
+			}
+		});
+		TextView review=(TextView)findViewById(R.id.review);
+		review.setOnClickListener(new OnClickListener() {
+			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -196,6 +252,22 @@ public class MainActivity extends FragmentActivity {
 				image2.setVisibility(View.INVISIBLE);
 				image1.setVisibility(View.VISIBLE);
 				image3.setVisibility(View.INVISIBLE);
+				
+				
+				
+				
+				FragmentTransaction fragmentTransaction;
+				FragmentManager fragmentManager = getSupportFragmentManager();
+				fragmentTransaction = fragmentManager.beginTransaction();
+				HomeFragmentpeople ls_fragment = new HomeFragmentpeople();
+
+				fragmentTransaction.replace(R.id.fragmentcontainer, ls_fragment);
+				fragmentTransaction.commit();
+
+				
+				
+				
+				
 			}
 		});
 		home.setOnClickListener(new OnClickListener() {
@@ -215,6 +287,35 @@ public class MainActivity extends FragmentActivity {
 				image2.setVisibility(View.VISIBLE);
 				image1.setVisibility(View.INVISIBLE);
 				image3.setVisibility(View.INVISIBLE);
+				
+				FragmentTransaction fragmentTransaction;
+				FragmentManager fragmentManager = getSupportFragmentManager();
+				fragmentTransaction = fragmentManager.beginTransaction();
+				HomeFragment ls_fragment = new HomeFragment();
+
+				fragmentTransaction.replace(R.id.fragmentcontainer, ls_fragment);
+				fragmentTransaction.commit();
+
+			}
+		});
+		resturanrt=(LinearLayout)findViewById(R.id.resturanrt);
+		resturanrt.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, TradingTags.class);
+				startActivity(i);
+			}
+		});
+		aboutus=(LinearLayout)findViewById(R.id.aboutus);
+		aboutus.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, EditProfile.class);
+				startActivity(i);
 			}
 		});
 		place.setOnClickListener(new OnClickListener() {
