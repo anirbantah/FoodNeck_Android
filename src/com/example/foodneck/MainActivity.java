@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -61,8 +62,7 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent i = new Intent(MainActivity.this, Redeem.class);
-				startActivity(i);
+			
 			}
 		});
 		rateus_lin.setOnClickListener(new OnClickListener() {
@@ -70,9 +70,7 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent i = new Intent(MainActivity.this, Resturantlist.class);
-				startActivity(i);
-
+				
 			}
 		});
 		editlin.setOnClickListener(new OnClickListener() {
@@ -80,7 +78,10 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent i = new Intent(MainActivity.this, Cards.class);
+				/*Intent i = new Intent(MainActivity.this, Cards.class);
+				startActivity(i);*/
+				
+				Intent i = new Intent(MainActivity.this, EditProfile.class);
 				startActivity(i);
 			}
 		});
@@ -132,6 +133,8 @@ public class MainActivity extends FragmentActivity {
 		peopleicon = (ImageView) findViewById(R.id.peopleicon);
 		homeicon = (ImageView) findViewById(R.id.homeicon);
 		placesicon = (ImageView) findViewById(R.id.placesicon);
+		
+		final FrameLayout fragmentcontainer=(FrameLayout)findViewById(R.id.fragmentcontainer);
 
 		mActionBar = getActionBar();
 
@@ -149,7 +152,28 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Intent i = new Intent(MainActivity.this, FilterActivity.class);
+			
+			}
+		});
+	
+		TextView followers=(TextView)findViewById(R.id.followers);
+		followers.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, Followes.class);
+				startActivity(i);
+			}
+		});
+		
+		TextView reedm=(TextView)findViewById(R.id.reedm);
+		reedm.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, Redeem.class);
 				startActivity(i);
 			}
 		});
@@ -158,24 +182,67 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent i = new Intent(MainActivity.this, MenuActivity.class);
-				startActivity(i);
+				
 			}
 		});
 		
+		
+		TextView cards_=(TextView)findViewById(R.id.cards_);
+		cards_.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, Cards.class);
+				startActivity(i);
+			}
+		});
+		TextView 	reslist=(TextView)findViewById(R.id.reslist);
+		reslist.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, Resturantlist.class);
+				startActivity(i);
+
+			}
+		});
+		
+	
 		TextView newres=(TextView)findViewById(R.id.newres);
 		newres.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent i = new Intent(MainActivity.this, NewRestaurent.class);
+				Intent i = new Intent(MainActivity.this, TradingTags.class);
+				startActivity(i);
+			}
+		});
+		TextView menu=(TextView)findViewById(R.id.menu);
+		menu.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, MenuActivity.class);
+				startActivity(i);
+			}
+		});
+		TextView filter=(TextView)findViewById(R.id.filter);
+		filter.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(MainActivity.this, FilterActivity.class);
 				startActivity(i);
 			}
 		});
 		
 		TextView usercards=(TextView)findViewById(R.id.usercards);
-		newres.setOnClickListener(new OnClickListener() {
+		usercards.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -252,6 +319,7 @@ public class MainActivity extends FragmentActivity {
 				image2.setVisibility(View.INVISIBLE);
 				image1.setVisibility(View.VISIBLE);
 				image3.setVisibility(View.INVISIBLE);
+				fragmentcontainer.removeAllViews();
 				
 				
 				
@@ -287,6 +355,7 @@ public class MainActivity extends FragmentActivity {
 				image2.setVisibility(View.VISIBLE);
 				image1.setVisibility(View.INVISIBLE);
 				image3.setVisibility(View.INVISIBLE);
+				fragmentcontainer.removeAllViews();
 				
 				FragmentTransaction fragmentTransaction;
 				FragmentManager fragmentManager = getSupportFragmentManager();
@@ -304,7 +373,9 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent i = new Intent(MainActivity.this, TradingTags.class);
+				/**/
+				
+				Intent i = new Intent(MainActivity.this, NewRestaurent.class);
 				startActivity(i);
 			}
 		});
@@ -314,8 +385,7 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Intent i = new Intent(MainActivity.this, EditProfile.class);
-				startActivity(i);
+			
 			}
 		});
 		place.setOnClickListener(new OnClickListener() {

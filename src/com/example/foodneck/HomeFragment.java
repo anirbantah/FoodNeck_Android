@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -30,6 +31,8 @@ public class HomeFragment extends Fragment {
 	ViewPager pager1, pager2;
 	LinearLayout lin1, lin2, lin3;
 	private static final int MAX_VIEWS = 3;
+	int abc=3;
+	int abc1=5;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater,
@@ -42,16 +45,20 @@ public class HomeFragment extends Fragment {
 		row = inflater.inflate(R.layout.homefragment, container, false);
 		pager = (ViewPager) row.findViewById(R.id.pager);
 		indicator = (CirclePageIndicator) row.findViewById(R.id.indicator);
+	
 		pager.setAdapter(mequest);
-		//pager.setOnPageChangeListener(new WalkthroughPageChangeListener1());
-		pager.setCurrentItem(1);
+		mequest.notifyDataSetChanged();
+	pager.setOnPageChangeListener(new WalkthroughPageChangeListener1());
+		//pager.setCurrentItem(1);
 		
 
 		indicator.setViewPager(pager);
 
 		pager1 = (ViewPager) row.findViewById(R.id.pager1);
 		indicator1 = (CirclePageIndicator) row.findViewById(R.id.indicator1);
+	
 		pager1.setAdapter(mequest1);
+		mequest1.notifyDataSetChanged();
 		indicator1.setViewPager(pager1);
 
 		list2 = (ListView) row.findViewById(R.id.list2);
@@ -97,7 +104,7 @@ public class HomeFragment extends Fragment {
 		return row;
 	}
 
-	public class QuotesAdapter extends FragmentPagerAdapter {
+	public class QuotesAdapter extends FragmentStatePagerAdapter {
 		Context ctxt = null;
 
 		public QuotesAdapter(Context ctxt, FragmentManager mgr) {
@@ -107,7 +114,7 @@ public class HomeFragment extends Fragment {
 
 		@Override
 		public int getCount() {
-			return (3);
+			return (abc);
 		}
 
 		@Override
@@ -125,7 +132,7 @@ public class HomeFragment extends Fragment {
 		 */
 	}
 
-	public class QuotesAdapter1 extends FragmentPagerAdapter {
+	public class QuotesAdapter1 extends FragmentStatePagerAdapter {
 		Context ctxt = null;
 
 		public QuotesAdapter1(Context ctxt, FragmentManager mgr) {
@@ -135,7 +142,7 @@ public class HomeFragment extends Fragment {
 
 		@Override
 		public int getCount() {
-			return (5);
+			return (abc1);
 		}
 
 		@Override
@@ -189,7 +196,7 @@ public class HomeFragment extends Fragment {
 
 	}
 
-	public class QuotesAdapter_3 extends FragmentPagerAdapter {
+	public class QuotesAdapter_3 extends FragmentStatePagerAdapter {
 		Context ctxt = null;
 
 		public QuotesAdapter_3(Context ctxt, FragmentManager mgr) {
@@ -310,5 +317,14 @@ System.out.println(arg0);
 		
 
 	}
+	
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+	
+	}
+	
+	
 
 }

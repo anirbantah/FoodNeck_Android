@@ -66,6 +66,11 @@
             android:label="@string/title_activity_followes"
             android:screenOrientation="portrait" >
         </activity>
+         <activity
+            android:name="com.example.foodneck.UserCards"
+            android:label="@string/title_activity_followes"
+            android:screenOrientation="portrait" >
+        </activity>
 
         <!--
         <activity

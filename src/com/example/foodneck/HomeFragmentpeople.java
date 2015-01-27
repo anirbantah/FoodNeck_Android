@@ -1,20 +1,20 @@
 package com.example.foodneck;
 
-import com.example.foodneck.HomeFragment.QuotesAdapter;
-import com.example.foodneck.HomeFragment.QuotesAdapter1;
-import com.example.foodneck.HomeFragment.QuotesAdapter_3;
+
+
+import com.viewpagerindicator.CirclePageIndicator1;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnTouchListener;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
@@ -35,6 +35,8 @@ public class HomeFragmentpeople extends Fragment{
 		//pager.setOnPageChangeListener(new WalkthroughPageChangeListener1());
 		pager.setCurrentItem(1);
 		
+		CirclePageIndicator1	indicator = (CirclePageIndicator1) row.findViewById(R.id.indicator);
+	indicator.setViewPager(pager);
 		list1=(ListView)row.findViewById(R.id.list1);
 		list1.setAdapter(new CommentAdapter_(getActivity()));
 		list1.setOnTouchListener(new OnTouchListener() {
@@ -52,7 +54,7 @@ public class HomeFragmentpeople extends Fragment{
 	}
 	
 	
-	public class QuotesAdapter extends FragmentPagerAdapter {
+	public class QuotesAdapter extends FragmentStatePagerAdapter {
 		Context ctxt = null;
 
 		public QuotesAdapter(Context ctxt, FragmentManager mgr) {
@@ -69,7 +71,7 @@ public class HomeFragmentpeople extends Fragment{
 		public Fragment getItem(int position) {
 			
 			System.out.println(position);
-			return (Nestedfragment.newInstance(position));
+			return (NestedFragmentPeolple.newInstance(position));
 		}
 
 		

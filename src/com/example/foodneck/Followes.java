@@ -3,17 +3,15 @@ package com.example.foodneck;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 public class Followes extends Activity {
@@ -27,6 +25,18 @@ ListView listView1;
 		setContentView(R.layout.activity_followes);
 		listView1=(ListView)findViewById(R.id.listView1);
 		listView1.setAdapter(new CommentAdapter_(Followes.this));
+		
+		ImageView imageView1=(ImageView)findViewById(R.id.imageView1);
+		imageView1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i=new Intent(Followes.this,MainActivity
+						.class);
+				startActivity(i);
+			}
+		});
 
 	}
 

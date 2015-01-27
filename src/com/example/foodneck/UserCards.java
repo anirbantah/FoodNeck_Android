@@ -2,9 +2,13 @@ package com.example.foodneck;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
@@ -23,7 +27,32 @@ public class UserCards extends Activity{
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.user_cards);
 		ListView list=(ListView)findViewById(R.id.list1);
+		
+		
 		list.setAdapter(new CommentAdapter_(UserCards.this));
+		ImageView backimage=(ImageView)findViewById(R.id.backimage);
+		backimage.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent i=new Intent(UserCards.this,MainActivity
+						.class);
+				startActivity(i);
+			}
+		});
+		list.setOnTouchListener(new OnTouchListener() {
+			// Setting on Touch Listener for handling the touch inside
+			// ScrollView
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				// Disallow the touch request for parent scroll on touch of
+				// child view
+				v.getParent().requestDisallowInterceptTouchEvent(true);
+				return false;
+			}
+		});
+		
 		
 	}
 	public class CommentAdapter_ extends BaseAdapter {

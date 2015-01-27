@@ -1,18 +1,16 @@
 package com.example.foodneck;
 
-import android.os.Bundle;
 import android.app.Activity;
-
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
-import android.widget.ScrollView;
+import android.widget.ImageView;
 
 public class FilterActivity extends Activity {
 	/*
@@ -25,6 +23,18 @@ public class FilterActivity extends Activity {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_filter);
+		
+		ImageView back=(ImageView)findViewById(R.id.back);
+		back.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i=new Intent(FilterActivity.this,MainActivity
+						.class);
+				startActivity(i);
+			}
+		});
 
 		/*
 		 * lv_cat = (ListView) findViewById(R.id.lv_cat);

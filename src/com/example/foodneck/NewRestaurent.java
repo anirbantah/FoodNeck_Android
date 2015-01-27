@@ -2,15 +2,16 @@ package com.example.foodneck;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 
 public class NewRestaurent extends Activity{
 
@@ -22,6 +23,17 @@ public class NewRestaurent extends Activity{
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.newresturant);
+		ImageView backimage=(ImageView)findViewById(R.id.backimage);
+		backimage.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i=new Intent(NewRestaurent.this,MainActivity
+						.class);
+				startActivity(i);
+			}
+		});
 		
 		
 	}

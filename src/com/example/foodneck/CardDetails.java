@@ -2,16 +2,16 @@ package com.example.foodneck;
 
 import android.app.Activity;
 import android.content.Context;
-import android.database.DataSetObserver;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 public class CardDetails extends Activity{
@@ -27,6 +27,17 @@ public class CardDetails extends Activity{
 		
 		ListView list=(ListView)findViewById(R.id.list);
 		list.setAdapter(new CommentAdapter_(CardDetails.this));
+		ImageView backimage=(ImageView)findViewById(R.id.backimage);
+		backimage.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i=new Intent(CardDetails.this,MainActivity
+						.class);
+				startActivity(i);
+			}
+		});
 	}
 	public class CommentAdapter_ extends BaseAdapter {
 

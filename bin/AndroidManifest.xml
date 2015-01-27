@@ -15,7 +15,7 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.foodneck.NewRestaurent"
+            android:name="com.example.foodneck.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -63,6 +63,11 @@
         </activity>
         <activity
             android:name="com.example.foodneck.Followes"
+            android:label="@string/title_activity_followes"
+            android:screenOrientation="portrait" >
+        </activity>
+         <activity
+            android:name="com.example.foodneck.UserCards"
             android:label="@string/title_activity_followes"
             android:screenOrientation="portrait" >
         </activity>

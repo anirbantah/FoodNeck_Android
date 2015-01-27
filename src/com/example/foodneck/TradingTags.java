@@ -26,7 +26,9 @@ public class TradingTags extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				finish();
+				Intent i=new Intent(TradingTags.this,MainActivity
+						.class);
+				startActivity(i);
 			}
 		});
 		
